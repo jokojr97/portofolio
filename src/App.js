@@ -3,6 +3,7 @@ import './App.css';
 import React, { useEffect } from 'react';
 import Home from './page/home';
 import Login from './page/login';
+import Blog from './page/blog';
 import {
   BrowserRouter as Router,
   Route,
@@ -11,6 +12,8 @@ import {
 import Portofolio from './page/portofolio';
 import NotFound from './page/Notfound';
 import { Spinner } from 'react-bootstrap';
+import About from './page/about';
+import Contact from './page/contact';
 // import { AOS } from 'aos';
 
 function App() {
@@ -29,6 +32,9 @@ function App() {
           <Switch>
             <Route path="/" exact element={<Home />} />
             <Route path="/portofolio" exact element={<Portofolio />} />
+            <Route path="/blog" exact element={<Blog />} />
+            <Route path="/about" exact element={<About />} />
+            <Route path="/contact" exact element={<Contact />} />
             <Route path="/login" exact element={<Login />} />
             <Route path="*" exact={true} element={<NotFound />} />
           </Switch>

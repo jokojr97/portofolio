@@ -13,12 +13,12 @@ const CardList = props => {
         // });
     }, []);
 
+    const itemList = [];
+
     props.data.forEach(dt => {
-        console.log(dt.title);
+        itemList.push(<CardTemp image={imgcaro} title={dt.title} deskripsi={dt.description} link={dt.link} />)
     });
-    const title = "Lorem ipsum dolor sit, amet consectetur adipisicing elit.";
-    const text = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere optio blanditiis perferendis! Aperiam enim at excepturi optio iusto quaerat architecto perferendis quam labore atque modi sit, temporibus blanditiis cumque dolores.";
-    const link = "#";
+
     return (
         <Container style={{ padding: "50px 0" }}>
             <Row>
@@ -32,11 +32,7 @@ const CardList = props => {
                     </div>
                 </Col>
             </Row>
-            <Row>
-                <CardTemp image={imgcaro} title={title} deskripsi={text} link={link} />
-                <CardTemp image={imgcaro} title={title} deskripsi={text} link={link} />
-                <CardTemp image={imgcaro} title={title} deskripsi={text} link={link} />
-            </Row>
+            <Row>{itemList}</Row>
         </Container>
     );
 }

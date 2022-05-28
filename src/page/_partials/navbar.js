@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../index.css';
 import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 
-const NavMenu = () => {
+const NavMenu = props => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
@@ -11,7 +11,7 @@ const NavMenu = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto"></Nav>
-                    <Nav defaultActiveKey="/">
+                    <Nav defaultActiveKey={props.activeKey}>
                         <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/portofolio">Portofolio</Nav.Link>
                         <Nav.Link href="/blog">Blog</Nav.Link>

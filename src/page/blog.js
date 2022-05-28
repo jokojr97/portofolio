@@ -7,8 +7,8 @@ import CarouselComp from "./_partials/carousel";
 import Footr from "./_partials/footer";
 import NavMenu from "./_partials/navbar";
 
-const Portofolio = () => {
-    // console.log("halaman Portofolio");
+const Blog = () => {
+    // console.log("halaman Blog");
     const datapost = [{
         title: "judul 1 Lorem ipsum dolor sit, amet consectetur",
         image: "jr.png",
@@ -28,7 +28,7 @@ const Portofolio = () => {
     return <div>
         {
             <div>
-                <NavMenu activeKey="/portofolio" />
+                <NavMenu activeKey="/blog" />
                 <CarouselComp />
                 <AboutMe />
                 <CardList data={datapost} title="Latest Project" description="Web Design and Developement" link="#" />
@@ -41,4 +41,4 @@ const Portofolio = () => {
 
 }
 
-export default Portofolio;
+export default Blog;
