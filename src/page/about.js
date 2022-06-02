@@ -2,6 +2,7 @@ import React from "react";
 import '../index.css';
 import AboutMe from "./_partials/aboutme";
 import Banner from "./_partials/banner";
+import BreadCumb from "./_partials/breadcumb";
 import CardList from "./_partials/cardlist";
 import CarouselComp from "./_partials/carousel";
 import Footr from "./_partials/footer";
@@ -9,6 +10,21 @@ import NavMenu from "./_partials/navbar";
 
 const About = () => {
     // console.log("halaman About");
+    const site = [{
+        title: "About",
+        description: "Lorem ipsum dolor sit, amet consectetur",
+        icon: "",
+        keywords: "Lorem ipsum dolor sit, amet consectetur",
+        breadcrumbs: [
+            {
+                name: "Home",
+                link: "/"
+            }, {
+                name: "About",
+                link: "/about"
+            }
+        ]
+    }];
     const datapost = [{
         title: "judul 1 Lorem ipsum dolor sit, amet consectetur",
         image: "jr.png",
@@ -29,6 +45,7 @@ const About = () => {
         {
             <div>
                 <NavMenu activeKey="/about" />
+                <BreadCumb site={site} />
                 <CarouselComp />
                 <AboutMe />
                 <CardList data={datapost} title="Latest Project" description="Web Design and Developement" link="#" />

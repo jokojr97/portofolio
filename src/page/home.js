@@ -7,7 +7,7 @@ import CarouselComp from "./_partials/carousel";
 import Footr from "./_partials/footer";
 import NavMenu from "./_partials/navbar";
 
-const Home = () => {
+const Home = props => {
     // console.log("halaman home");
     const datapost = [{
         title: "judul 1 Lorem ipsum dolor sit, amet consectetur",

@@ -16,14 +16,22 @@ import About from './page/about';
 import Contact from './page/contact';
 // import { AOS } from 'aos';
 
+// mongggo db
+import mongoose from 'mongoose';
+// import Dbcon from './utilities/db';
+// import Porto from './model/porto';
+
 function App() {
+  // Dbcon();
+
   const [ready, setReady] = React.useState(false);
   useEffect(() => {
     // AOS.init();
     // AOS.refresh();
     setTimeout(() => {
       setReady(true);
-    }, 200)
+    }, 200);
+    // console.log(Porto.find())
   })
   return (
     <React.Fragment>

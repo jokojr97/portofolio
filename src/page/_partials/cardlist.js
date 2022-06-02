@@ -16,7 +16,7 @@ const CardList = props => {
     const itemList = [];
 
     props.data.forEach(dt => {
-        itemList.push(<CardTemp image={imgcaro} title={dt.title} deskripsi={dt.description} link={dt.link} />)
+        itemList.push(<CardTemp key={dt.title} image={imgcaro} title={dt.title} deskripsi={dt.description} link={dt.link} />)
     });
 
     return (
