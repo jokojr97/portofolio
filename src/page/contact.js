@@ -9,22 +9,14 @@ import CarouselComp from "./_partials/carousel";
 import Footr from "./_partials/footer";
 import NavMenu from "./_partials/navbar";
 
-const Contact = () => {
+const Contact = props => {
     // console.log("halaman Contact");
     const site = [{
         title: "Contact",
-        description: "Lorem ipsum dolor sit, amet consectetur",
+        description: "Berikut kontak kami mulai dari alamat, nomor telepon, email dan kami juga menyediakan form langsung dari website untuk anda meninggalkan pesan.",
         icon: "",
         keywords: "Lorem ipsum dolor sit, amet consectetur",
-        breadcrumbs: [
-            {
-                name: "Home",
-                link: "/"
-            }, {
-                name: "Contact",
-                link: "/contact"
-            }
-        ]
+        breadcrumbs: props.breadcumbs
     }];
     const url = "https://backend-portojoe.netlify.app/";
     const [portofolios, setPortofolios] = useState([])

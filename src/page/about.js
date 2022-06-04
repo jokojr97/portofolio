@@ -9,22 +9,14 @@ import CarouselComp from "./_partials/carousel";
 import Footr from "./_partials/footer";
 import NavMenu from "./_partials/navbar";
 
-const About = () => {
+const About = props => {
     // console.log("halaman About");
     const site = [{
         title: "About",
         description: "Lorem ipsum dolor sit, amet consectetur",
         icon: "",
         keywords: "Lorem ipsum dolor sit, amet consectetur",
-        breadcrumbs: [
-            {
-                name: "Home",
-                link: "/"
-            }, {
-                name: "About",
-                link: "/about"
-            }
-        ]
+        breadcrumbs: props.breadcumbs
     }];
     const url = "https://backend-portojoe.netlify.app/";
     const [portofolios, setPortofolios] = useState([])

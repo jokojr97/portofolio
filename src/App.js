@@ -26,12 +26,9 @@ function App() {
 
   const [ready, setReady] = React.useState(false);
   useEffect(() => {
-    // AOS.init();
-    // AOS.refresh();
     setTimeout(() => {
       setReady(true);
     }, 200);
-    // console.log(Porto.find())
   })
   return (
     <React.Fragment>
@@ -39,10 +36,51 @@ function App() {
         <Router>
           <Switch>
             <Route path="/" exact element={<Home />} />
-            <Route path="/portofolio" exact element={<Portofolio />} />
-            <Route path="/blog" exact element={<Blog />} />
-            <Route path="/about" exact element={<About />} />
-            <Route path="/contact" exact element={<Contact />} />
+            <Route path="/portofolio" exact element={<Portofolio
+              breadcumbs={[
+                {
+                  name: "Home",
+                  link: "/"
+                },
+                {
+                  name: "Portofolio",
+                  link: "/portofolio"
+                }
+              ]}
+            />} />
+            <Route path="/blog" exact element={<Blog
+              breadcumbs={[
+                {
+                  name: "Home",
+                  link: "/"
+                },
+                {
+                  name: "Blog",
+                  link: "/blog"
+                }
+              ]} />} />
+            <Route path="/about" exact element={<About
+              breadcumbs={[
+                {
+                  name: "Home",
+                  link: "/"
+                },
+                {
+                  name: "About",
+                  link: "/about"
+                }
+              ]} />} />
+            <Route path="/contact" exact element={<Contact
+              breadcumbs={[
+                {
+                  name: "Home",
+                  link: "/"
+                },
+                {
+                  name: "Contact",
+                  link: "/contact"
+                }
+              ]} />} />
             <Route path="/login" exact element={<Login />} />
             <Route path="*" exact={true} element={<NotFound />} />
           </Switch>
